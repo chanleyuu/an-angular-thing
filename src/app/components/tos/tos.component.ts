@@ -12,10 +12,21 @@ export class TosComponent implements OnInit {
 
   constructor(private todoService:TodoService) { }
 
-  ngOnInit(): void {
-  	this.todoService.getTos().subscribe(tos => { 
+  ngOnInit() {
+  	this.todoService.getTos().subscribe(tos => {
   	this.tos = tos;
   	});
   }
 
+
+  deleteTodo(todo:Todo) {
+    this.tos = this.tos.filter(t => t.id !== todo.id);
+    this.todoService.deleteTodo(todo).subscribe();
+  }
+
+  addTodo(todo:Todo) {
+    this.todoService.addTodo(todo).subscribe(todo => {
+      this.tos.push(todo);
+    });
+  }
 }
