@@ -28,5 +28,6 @@ export class TosComponent implements OnInit {
     this.todoService.addTodo(todo).subscribe(todo => {
       this.tos.push(todo);
     });
+    console.log("yay");
   }
 }

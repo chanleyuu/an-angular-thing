@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { TodoService } from '../../services/todo.service';
+
 import { Todo } from 'src/app/models/Todo';
 
 @Component({
@@ -7,36 +8,34 @@ import { Todo } from 'src/app/models/Todo';
   templateUrl: './todo-item.component.html',
   styleUrls: ['./todo-item.component.css']
 })
-
 export class TodoItemComponent implements OnInit {
-	tos:Todo[];
+  @Input() todo: Todo;
+  @Output() deleteTodo: EventEmitter<Todo> = new EventEmitter();
 
-	@Input() todo: Todo;
-	@Output() deleteTodo: EventEmitter<Todo> = new EventEmitter();
+  constructor(private todoService:TodoService) { }
 
-	constructor(private todoService:TodoService) { }
+  ngOnInit() {
+  }
 
-	ngOnInit(): void {
-	}
+  // Set Dynamic Classes
+  setClasses() {
+    let classes = {
+      todo: true,
+      'is-complete': this.todo.completed
+    }
 
-	//Set Dynamic Classes
-	setClasses() {
-		let classes = {
-		todo: true,
-		'is-complete': this.todo.completed
-		}
+    return classes;
+  }
 
-		return classes;
-	}
+  onToggle(todo) {
+    // Toggle in UI
+    todo.completed = !todo.completed;
+    // Toggle on server
+    this.todoService.toggleCompleted(todo).subscribe(todo => console.log(todo));
+  }
 
-	onToggle(todo) {
-		//Toggle things
-		todo.completed = !todo.completed;
+  onDelete(todo) {
+    this.deleteTodo.emit(todo);
+  }
 
-		this.todoService.toggleCompleted(todo).subscribe(todo => console.log(todo));
-	}
-
-	onDelete(todo) {
-		this.deleteTodo.emit(todo);
-	}
 }

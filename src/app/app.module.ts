@@ -9,7 +9,9 @@ import { TosComponent } from './components/tos/tos.component';
 import { TodoItemComponent } from './components/todo-item/todo-item.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { AddTodoComponent } from './components/add-todo/add-todo.component';
-//import { AboutComponent } from './components/pages/about/about.component';
+import { AboutComponent } from './components/pages/about/about.component';
+import { RatingsFormComponent } from './components/ratings-form/ratings-form.component';
+import { RatingsPageComponent } from './components/pages/ratings-page/ratings-page.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +19,10 @@ import { AddTodoComponent } from './components/add-todo/add-todo.component';
     TosComponent,
     TodoItemComponent,
     HeaderComponent,
-    AddTodoComponent
-  //  AboutComponent
+    AddTodoComponent,
+    AboutComponent,
+    RatingsFormComponent,
+    RatingsPageComponent
   ],
   imports: [
     BrowserModule,
