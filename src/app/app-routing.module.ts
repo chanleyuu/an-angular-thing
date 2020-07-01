@@ -9,7 +9,7 @@ import { RatingsFormComponent } from './components/ratings-form/ratings-form.com
 const routes: Routes = [
   { path: '', component: TosComponent },
   { path: 'about', component: AboutComponent },
-   { path: 'Ratings', component: RatingsPageComponent }
+  { path: 'ratings-page', component: RatingsPageComponent }
 ];
 
 @NgModule({
