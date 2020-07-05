@@ -1,0 +1,84 @@
+<div class="container">
+  <div [hidden]="submitted">
+    <h1>Ratings Form</h1>
+
+    <form (ngSubmit)="onSubmit()" #ratingsForm="ngForm">
+      <div class="form-group">
+        <div class="custom-radio">
+        <label for="rating1">Rate Bannanas:</label>
+        <p></p>
+        <label for="rating1">1</label>
+          <input type="radio" class="form-control-radio" id="rating1-1"
+              required
+              [(ngModel)]="model.rating1" name="rating1" value="1"
+               #rating1="ngModel">
+          <label for="rating1">2</label>
+          <input type="radio" class="form-control-radio" id="rating1-2"
+              required
+              [(ngModel)]="model.rating1" name="rating1" value="2"
+              #rating1="ngModel">
+              <label for="rating1-2">
+                <span>
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+                </span>
+              </label>
+        <label for="rating1">3</label>
+        <input type="radio" class="form-control-radio" id="rating1-3"
+              required
+              [(ngModel)]="model.rating1" name="rating1" value="3"
+              #rating1="ngModel">
+        <label for="rating1">4</label>
+        <input type="radio" class="form-control-radio" id="rating1-4"
+              required
+              [(ngModel)]="model.rating1" name="rating1" value="4"
+              #rating1="ngModel">
+        <label for="rating1">5</label>
+        <input type="radio" class="form-control-radio" id="rating1-5"
+              required
+              [(ngModel)]="model.rating1" name="rating1" value="5"
+              #rating1="ngModel">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="rating2">Rate Pineapples:</label>
+        <p></p>
+        <input type="number" class="form-control" id="rating2"
+              required
+              [(ngModel)]="model.rating2" name="rating2"
+               #rating2="ngModel">
+      </div>
+
+      <div class="form-group">
+        <label for="rating3">Rate Mangos:</label>
+        <p></p>
+        <input type="number" class="form-control" id="rating3"
+              required
+              [(ngModel)]="model.rating3" name="rating3"
+               #rating3="ngModel">
+      </div>
+
+
+      <p>_________</p>
+    <button type="submit" class="btn btn-success" [disabled]="!ratingsForm.form.valid">Submit</button>
+  </form>
+  </div>
+
+  <div [hidden]="!submitted">
+    <h2>You submitted the following:</h2>
+    <div class="row">
+      <div class="col-xs-3">Rating1</div>
+      <div class="col-xs-9">{{ model.rating1 }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Rating2</div>
+      <div class="col-xs-9">{{ model.rating2 }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Rating3</div>
+      <div class="col-xs-9">{{ model.rating3 }}</div>
+    </div>
+    <br>
+    <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+  </div>
+</div>

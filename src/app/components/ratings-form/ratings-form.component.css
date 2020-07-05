@@ -1,0 +1,107 @@
+$color-3: #f1c40f; /*Yellow*/
+
+.btn-success {
+  transition-duration: 0.4s;
+}
+
+.btn-success:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+
+.form-control {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.form-control span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.form-control span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.form-control:hover span {
+  padding-right: 25px;
+}
+
+.form-control:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+
+.custom-radio {
+
+  div {
+    display: inline-block;
+  }
+
+  input[type="radio"] {
+    display: none;
+
+    + label {
+      color: #333;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+
+      span {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin: -1px 4px 0 0;
+        vertical-align: middle;
+        cursor: pointer;
+        border-radius: 50%;
+        border: 2px solid #FFFFFF;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+        background-repeat: no-repeat;
+        background-position: center;
+        text-align: center;
+        line-height: 44px;
+
+        img {
+          opacity: 0;
+          transition: all .3s ease;
+        }
+      }
+    }
+
+
+    &#rating1-2 + label span {
+      background-color: $color-3;
+    }
+
+
+    &:checked + label span img {
+      opacity: 1;
+    }
+  }
+}
