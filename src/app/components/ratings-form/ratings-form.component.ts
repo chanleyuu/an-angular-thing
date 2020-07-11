@@ -14,7 +14,7 @@ export class RatingsFormComponent implements OnInit {
 
   submitted = false;
 
-  model = new Ratings(1, 1, 1);
+  model = new Ratings(1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
 
   constructor() { }
 
@@ -25,7 +25,11 @@ export class RatingsFormComponent implements OnInit {
       this.submitted = true;
   }
 
+　radiotoggle(rate:number, num:number){
+    radiobtn = document.getElementById("rating"+rate+"-"+num);
+    radiobtn.checked = true;
+  }
   newRating() {
-    this.model = new Ratings(0, 0, 0);
+    this.model = new Ratings(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
   }
 }

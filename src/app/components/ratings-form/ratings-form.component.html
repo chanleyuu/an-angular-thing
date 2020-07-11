@@ -4,62 +4,215 @@
 
     <form (ngSubmit)="onSubmit()" #ratingsForm="ngForm">
       <div class="form-group">
-        <div class="custom-radio">
-        <label for="rating1">Rate Bannanas:</label>
-        <p></p>
-        <label for="rating1">1</label>
-          <input type="radio" class="form-control-radio" id="rating1-1"
-              required
-              [(ngModel)]="model.rating1" name="rating1" value="1"
-               #rating1="ngModel">
-          <label for="rating1">2</label>
-          <input type="radio" class="form-control-radio" id="rating1-2"
-              required
-              [(ngModel)]="model.rating1" name="rating1" value="2"
-              #rating1="ngModel">
-              <label for="rating1-2">
-                <span>
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
-                </span>
-              </label>
-        <label for="rating1">3</label>
-        <input type="radio" class="form-control-radio" id="rating1-3"
-              required
-              [(ngModel)]="model.rating1" name="rating1" value="3"
-              #rating1="ngModel">
-        <label for="rating1">4</label>
-        <input type="radio" class="form-control-radio" id="rating1-4"
-              required
-              [(ngModel)]="model.rating1" name="rating1" value="4"
-              #rating1="ngModel">
-        <label for="rating1">5</label>
-        <input type="radio" class="form-control-radio" id="rating1-5"
-              required
-              [(ngModel)]="model.rating1" name="rating1" value="5"
-              #rating1="ngModel">
+        <div class="Labels">
+
         </div>
+          <table style="width:100%" id="rating-table">
+          <tr>
+          <th> <h2>1. Eating</h2> </th>
+          </tr>
+          <tr>
+          <td for="rating1" ng-click="radiotoggle(1,1)">0: Fully dependent.</td>
+          <td>  <input type="radio" class="option-input radio" id="rating1-1" checked="checked"
+                required
+                [(ngModel)]="model.rating1" name="rating1" value="1"
+                 #rating1="ngModel"> </td>
+          </tr>
+          <tr>
+          <td for="rating1">  1: Needs help for feeding for greater than 50% of the total amout.</td>
+          <td> <input type="radio" class="option-input radio" id="rating1-2"
+                required
+                [(ngModel)]="model.rating1" name="rating1" value="2"
+                #rating1="ngModel"> </td>
+          </tr>
+          <tr>
+          <td for="rating1">2: Needs help for feeding for less than 50% of the total amount.</td>
+          <td> <input type="radio" class="option-input radio" id="rating1-3"
+                required
+                [(ngModel)]="model.rating1" name="rating1" value="3"
+                #rating1="ngModel"> </td>
+          </tr>
+          <tr>
+          <td for="rating1">3: Independent but needs assisting device or modified food consistency or safety consideration.</td>
+          <td> <input type="radio" class="option-input radio" id="rating1-4"
+                required
+                [(ngModel)]="model.rating1" name="rating1" value="4"
+                #rating1="ngModel"> </td>
+          </tr>
+          <tr>
+          <td for="rating1">  4: Independent but requires longer time on a regular basis (regular food, regular utensils).</td>
+          <td> <input type="radio" class="option-input radio" id="rating1-5"
+                required
+                [(ngModel)]="model.rating1" name="rating1" value="5"
+                #rating1="ngModel"> </td>
+          </tr>
+          <tr>
+          <td for="rating1">  5: Complete independence (regular utensils,regular food and texture).</td>
+          <td> <input type="radio" class="option-input radio" id="rating1-6"
+                required
+                [(ngModel)]="model.rating1" name="rating1" value="6"
+                #rating1="ngModel"> </td>
+          </tr>
+          </table>
       </div>
+
+      <br>
 
       <div class="form-group">
-        <label for="rating2">Rate Pineapples:</label>
-        <p></p>
-        <input type="number" class="form-control" id="rating2"
+        <table style="width:100%" id="rating-table">
+        <tr>
+        <th> <h2>2. Dressing Upper Body.</h2> </th>
+        </tr>
+        <tr>
+        <td for="rating2">0: Fully dependent.</td>
+        <td>  <input type="radio" class="option-input radio" id="rating2-1"
               required
-              [(ngModel)]="model.rating2" name="rating2"
-               #rating2="ngModel">
+              [(ngModel)]="model.rating2" name="rating2" value="1"
+               #rating2="ngModel"> </td>
+        </tr>
+        <tr>
+        <td for="rating2">1: Needs help but able to perform less than 50% of the task alone.</td>
+        <td> <input type="radio" class="option-input radio" id="rating2-2"
+              required
+              [(ngModel)]="model.rating2" name="rating2" value="2"
+              #rating2="ngModel"> </td>
+        </tr>
+        <tr>
+        <td for="rating2">2: Needs help but able to perform greater than or equal to 50% of the task alone.</td>
+        <td> <input type="radio" class="option-input radio" id="rating2-3"
+              required
+              [(ngModel)]="model.rating2" name="rating2" value="3"
+              #rating2="ngModel"> </td>
+        </tr>
+        <tr>
+        <td for="rating2">Modified independence (independent with regard to modification of clothes).</td>
+        <td> <input type="radio" class="option-input radio" id="rating2-4"
+              required
+              [(ngModel)]="model.rating2" name="rating2" value="4"
+              #rating2="ngModel"> </td>
+        </tr>
+        <tr>
+        <td for="rating2"> 4: Partial independence (may need longer than reasonable time or help to get clothes from drawer or with buttons).</td>
+        <td> <input type="radio" class="option-input radio" id="rating2-5"
+              required
+              [(ngModel)]="model.rating2" name="rating2" value="5"
+              #rating2="ngModel"> </td>
+        </tr>
+        <tr>
+        <td for="rating2">  5: Complete independence.</td>
+        <td> <input type="radio" class="option-input radio" id="rating2-6"
+              required
+              [(ngModel)]="model.rating2" name="rating2" value="6"
+              #rating2="ngModel"> </td>
+        </tr>
+        </table>
       </div>
+
+      <br>
 
       <div class="form-group">
-        <label for="rating3">Rate Mangos:</label>
-        <p></p>
-        <input type="number" class="form-control" id="rating3"
+        <table style="width:100%" id="rating-table">
+        <tr>
+        <th> <h2>3. Dressing lower body.</h2> </th>
+        </tr>
+        <tr>
+        <td for="rating3">0: Fully dependent.</td>
+        <td>  <input type="radio" class="option-input radio" id="rating3-1"
               required
-              [(ngModel)]="model.rating3" name="rating3"
-               #rating3="ngModel">
+              [(ngModel)]="model.rating3" name="rating3" value="1"
+               #rating3="ngModel"> </td>
+        </tr>
+        <tr>
+        <td for="rating3">1: Needs help but able to perform less than 50% of the task alone.</td>
+        <td> <input type="radio" class="option-input radio" id="rating3-2"
+              required
+              [(ngModel)]="model.rating3" name="rating3" value="2"
+              #rating3="ngModel"> </td>
+        </tr>
+        <tr>
+        <td for="rating3">2: Needs help but able to perform greater than or equal to 50% of the task alone.</td>
+        <td> <input type="radio" class="option-input radio" id="rating3-3"
+              required
+              [(ngModel)]="model.rating3" name="rating3" value="3"
+              #rating3="ngModel"> </td>
+        </tr>
+        <tr>
+        <td for="rating3">Modified independence (independent with regard to modification of clothes).</td>
+        <td> <input type="radio" class="option-input radio" id="rating3-4"
+              required
+              [(ngModel)]="model.rating3" name="rating3" value="4"
+              #rating3="ngModel"> </td>
+        </tr>
+        <tr>
+        <td for="rating3"> 4: Partial independence (may need longer than reasonable time or help to get clothes from drawer or with buttons).</td>
+        <td> <input type="radio" class="option-input radio" id="rating3-5"
+              required
+              [(ngModel)]="model.rating3" name="rating3" value="5"
+              #rating3="ngModel"> </td>
+        </tr>
+        <tr>
+        <td for="rating3">  5: Complete independence.</td>
+        <td> <input type="radio" class="option-input radio" id="rating3-6"
+              required
+              [(ngModel)]="model.rating3" name="rating3" value="6"
+              #rating3="ngModel"> </td>
+        </tr>
+        </table>
       </div>
 
+      <br>
 
-      <p>_________</p>
+      <div class="form-group" >
+        <table style="width:100%" id="rating-table">
+        <tr>
+        <th> <h2>4. Bathing.</h2> </th>
+        </tr>
+        <tr>
+        <td for="rating4">0: Fully dependent.</td>
+        <td>  <input type="radio" class="option-input radio" id="rating4-1"
+              required
+              [(ngModel)]="model.rating4" name="rating4" value="1"
+               #rating4="ngModel"> </td>
+        </tr>
+        <tr>
+        <td for="rating4">1. Needs help to perform most of the task (definitively >50%).</td>
+        <td> <input type="radio" class="option-input radio" id="rating4-2"
+              required
+              [(ngModel)]="model.rating4" name="rating4" value="2"
+              #rating4="ngModel"> </td>
+        </tr>
+        <tr>
+        <td for="rating4">2: Needs help but able to perform greater than or equal to 50% of the task alone.</td>
+        <td> <input type="radio" class="option-input radio" id="rating4-3"
+              required
+              [(ngModel)]="model.rating4" name="rating4" value="3"
+              #rating4="ngModel"> </td>
+        </tr>
+        <tr>
+        <td for="rating4">Modified independence (independent with regard to modification of clothes).</td>
+        <td> <input type="radio" class="option-input radio" id="rating4-4"
+              required
+              [(ngModel)]="model.rating4" name="rating4" value="4"
+              #rating4="ngModel"> </td>
+        </tr>
+        <tr>
+        <td for="rating4"> 4: Partial independence (may need longer than reasonable time or help to get clothes from drawer or with buttons).</td>
+        <td> <input type="radio" class="option-input radio" id="rating4-5"
+              required
+              [(ngModel)]="model.rating4" name="rating4" value="5"
+              #rating4="ngModel"> </td>
+        </tr>
+        <tr>
+        <td for="rating4">  5: Complete independence.</td>
+        <td> <input type="radio" class="option-input radio" id="rating4-6"
+              required
+              [(ngModel)]="model.rating4" name="rating4" value="6"
+              #rating4="ngModel"> </td>
+        </tr>
+        </table>
+      </div>
+
+      <br>
     <button type="submit" class="btn btn-success" [disabled]="!ratingsForm.form.valid">Submit</button>
   </form>
   </div>
@@ -77,6 +230,10 @@
     <div class="row">
       <div class="col-xs-3">Rating3</div>
       <div class="col-xs-9">{{ model.rating3 }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Rating4</div>
+      <div class="col-xs-9">{{ model.rating4 }}</div>
     </div>
     <br>
     <button class="btn btn-primary" (click)="submitted=false">Edit</button>
