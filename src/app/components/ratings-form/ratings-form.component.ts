@@ -1,6 +1,7 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output} from '@angular/core';
 
 import { Ratings } from '../../models/Ratings';
+
 
 @Component({
   selector: 'app-ratings-form',
@@ -11,12 +12,17 @@ export class RatingsFormComponent implements OnInit {
 
   @Output() ratingsForm: EventEmitter<any> = new EventEmitter();
 
+  radio: string = "rating";
 
   submitted = false;
 
-  model = new Ratings(1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+  rating1: number;
 
-  constructor() { }
+  model = new Ratings(this.rating1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+
+  constructor() {
+    this.model.rating1 = '1';
+  }
 
   ngOnInit(): void {
   }
@@ -25,11 +31,10 @@ export class RatingsFormComponent implements OnInit {
       this.submitted = true;
   }
 
-　radiotoggle(rate:number, num:number){
-    radiobtn = document.getElementById("rating"+rate+"-"+num);
-    radiobtn.checked = true;
+　radiotoggle(num:number){
+    this.model.rating1 = num;
   }
   newRating() {
-    this.model = new Ratings(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    this.model = new Ratings(this.rating1, 0, 0, 0, 0, 0, 0, 0, 0, 0);
   }
 }

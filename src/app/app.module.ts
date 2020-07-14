@@ -13,6 +13,7 @@ import { AboutComponent } from './components/pages/about/about.component';
 import { RatingsFormComponent } from './components/ratings-form/ratings-form.component';
 import { RatingsPageComponent } from './components/pages/ratings-page/ratings-page.component';
 import { TogglebuttonComponent } from './components/togglebutton/togglebutton.component';
+import { RadioselectDirective } from './radioselect.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TogglebuttonComponent } from './components/togglebutton/togglebutton.co
     AboutComponent,
     RatingsFormComponent,
     RatingsPageComponent,
-    TogglebuttonComponent
+    TogglebuttonComponent,
+    RadioselectDirective
   ],
   imports: [
     BrowserModule,

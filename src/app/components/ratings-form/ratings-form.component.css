@@ -153,6 +153,10 @@ body label {
   padding: 8px;
 }
 
+#rating-table td:clicked {
+
+}
+
 #rating-table tr:nth-child(even){background-color: #f2f2f2;}
 
 #rating-table tr:hover {background-color: #ddd;}

@@ -7,46 +7,45 @@
         <div class="Labels">
 
         </div>
-          <table style="width:100%" id="rating-table">
+          <table style="width:100%" id="rating-table" order = "1" cellpadding = "5" cellspacing = "5">
           <tr>
           <th> <h2>1. Eating</h2> </th>
           </tr>
-          <tr>
-          <td for="rating1" ng-click="radiotoggle(1,1)">0: Fully dependent.</td>
-          <td>  <input type="radio" class="option-input radio" id="rating1-1" checked="checked"
-                required
+          <tr (click)="model.rating1 = '1'; clicked=!clicked" class="notselected">
+          <td for="rating1"> 0: Fully dependent.</td>
+          <td>  <input type="radio" class="option-input radio" ng-value="true" ng-model="model.rating1" id="rating1-1"
                 [(ngModel)]="model.rating1" name="rating1" value="1"
                  #rating1="ngModel"> </td>
           </tr>
-          <tr>
+          <tr (click)="model.rating1 = '2'">
           <td for="rating1">  1: Needs help for feeding for greater than 50% of the total amout.</td>
           <td> <input type="radio" class="option-input radio" id="rating1-2"
                 required
                 [(ngModel)]="model.rating1" name="rating1" value="2"
                 #rating1="ngModel"> </td>
           </tr>
-          <tr>
+          <tr (click)="model.rating1 = '3'">
           <td for="rating1">2: Needs help for feeding for less than 50% of the total amount.</td>
           <td> <input type="radio" class="option-input radio" id="rating1-3"
                 required
                 [(ngModel)]="model.rating1" name="rating1" value="3"
                 #rating1="ngModel"> </td>
           </tr>
-          <tr>
+          <tr (click)="model.rating1 = '4'">
           <td for="rating1">3: Independent but needs assisting device or modified food consistency or safety consideration.</td>
           <td> <input type="radio" class="option-input radio" id="rating1-4"
                 required
                 [(ngModel)]="model.rating1" name="rating1" value="4"
                 #rating1="ngModel"> </td>
           </tr>
-          <tr>
+          <tr (click)="model.rating1 = '5'">
           <td for="rating1">  4: Independent but requires longer time on a regular basis (regular food, regular utensils).</td>
           <td> <input type="radio" class="option-input radio" id="rating1-5"
                 required
                 [(ngModel)]="model.rating1" name="rating1" value="5"
                 #rating1="ngModel"> </td>
           </tr>
-          <tr>
+          <tr (click)="model.rating1 = '6'">
           <td for="rating1">  5: Complete independence (regular utensils,regular food and texture).</td>
           <td> <input type="radio" class="option-input radio" id="rating1-6"
                 required
