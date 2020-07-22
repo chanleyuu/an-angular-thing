@@ -103,7 +103,7 @@ body label {
   border: none;
   color: #fff;
   cursor: pointer;
-  display: inline-block;
+  display: none;
   margin-right: 0.5rem;
   outline: none;
   position: relative;
@@ -175,6 +175,6 @@ body label {
   border: 1px solid #ddd;
 }
 
-.option-input.radio:checked+.set {
-  border: 5px solid blue;
+.selected {
+  border: 5px solid #2573ba;
 }

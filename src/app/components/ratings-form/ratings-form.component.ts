@@ -37,6 +37,13 @@ export class RatingsFormComponent implements OnInit {
     this.model.rating1 = num;
   }
 
+  checkborder(num): string{
+    if (num == this.model.rating1){
+      return "border: 5px solid blue";
+    }
+    return "border: 1px solid #ddd";
+  }
+
   newRating() {
     this.model = new Ratings(this.rating1, 0, 0, 0, 0, 0, 0, 0, 0, 0);
   }
