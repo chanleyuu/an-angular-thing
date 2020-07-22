@@ -114,6 +114,7 @@ body label {
 }
 .option-input:checked {
   background: #2573ba;
+
 }
 .option-input:checked::before {
   height: 40px;
@@ -153,13 +154,14 @@ body label {
   padding: 8px;
 }
 
-#rating-table td:clicked {
-
-}
-
 #rating-table tr:nth-child(even){background-color: #f2f2f2;}
 
 #rating-table tr:hover {background-color: #ddd;}
+
+#rating-table td: {
+  border-collapse: separate;
+  border-color: blue;
+}
 
 #rating-table th {
   padding-top: 12px;
@@ -167,4 +169,12 @@ body label {
   text-align: left;
   background-color: #2573ba;
   color: white;
+}
+
+.option-input.radio, .set {
+  border: 1px solid #ddd;
+}
+
+.option-input.radio:checked+.set {
+  border: 5px solid blue;
 }

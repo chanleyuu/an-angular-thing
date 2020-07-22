@@ -12,6 +12,7 @@ export class RatingsFormComponent implements OnInit {
 
   @Output() ratingsForm: EventEmitter<any> = new EventEmitter();
 
+
   radio: string = "rating";
 
   submitted = false;
@@ -21,19 +22,21 @@ export class RatingsFormComponent implements OnInit {
   model = new Ratings(this.rating1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
 
   constructor() {
-    this.model.rating1 = '1';
+    this.model.rating1 = 1;
   }
 
   ngOnInit(): void {
+
   }
 
   onSubmit() {
       this.submitted = true;
   }
 
-　radiotoggle(num:number){
+　radiotoggle(num){
     this.model.rating1 = num;
   }
+
   newRating() {
     this.model = new Ratings(this.rating1, 0, 0, 0, 0, 0, 0, 0, 0, 0);
   }
