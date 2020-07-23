@@ -33,16 +33,26 @@ export class RatingsFormComponent implements OnInit {
       this.submitted = true;
   }
 
-　radiotoggle(num){
-    this.model.rating1 = num;
+　radiotoggle(num, rate){
+      switch (rate) {
+        case '1':
+              this.model.rating1 = num;
+          break;
+        case '2':
+              this.model.rating2 = num;
+          break;
+        case '3':
+              this.model.rating3 = num;
+          break;
+        case '4':
+              this.model.rating4 = num;
+        break;
+        default:
+          break;
+      }
+
   }
 
-  checkborder(num): string{
-    if (num == this.model.rating1){
-      return "border: 5px solid blue";
-    }
-    return "border: 1px solid #ddd";
-  }
 
   newRating() {
     this.model = new Ratings(this.rating1, 0, 0, 0, 0, 0, 0, 0, 0, 0);

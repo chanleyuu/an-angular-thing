@@ -151,7 +151,11 @@ body label {
 
 #rating-table td, #rating-table th {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 12px;
+}
+
+#rating-table td {
+  padding: 12px;
 }
 
 #rating-table tr:nth-child(even){background-color: #f2f2f2;}
@@ -171,10 +175,11 @@ body label {
   color: white;
 }
 
-.option-input.radio, .set {
-  border: 1px solid #ddd;
-}
 
 .selected {
   border: 5px solid #2573ba;
+}
+
+.notselected {
+
 }
