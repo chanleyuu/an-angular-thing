@@ -17,9 +17,7 @@ export class RatingsFormComponent implements OnInit {
 
   submitted = false;
 
-  rating1: number;
-
-  model = new Ratings(this.rating1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+  model = new Ratings(0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0);
 
   constructor() {
     this.model.rating1 = 1;
@@ -47,14 +45,35 @@ export class RatingsFormComponent implements OnInit {
         case '4':
               this.model.rating4 = num;
         break;
+        case '5':
+              this.model.rating5 = num;
+          break;
+        case '6':
+              this.model.rating6 = num;
+          break;
+        case '7':
+              this.model.rating7 = num;
+          break;
+        case '8':
+              this.model.rating8 = num;
+        break;
+        case '9':
+              this.model.rating9 = num;
+          break;
+        case '10':
+              this.model.rating10 = num;
+          break;
         default:
           break;
       }
-
+      this.model.total = this.totals();
   }
 
+  totals(): number {
+    return Number(this.model.rating1) + Number(this.model.rating2) + Number(this.model.rating3) + Number(this.model.rating4) + Number(this.model.rating5) + Number(this.model.rating6) + Number(this.model.rating7) + Number(this.model.rating8) + Number(this.model.rating10);
+  }
 
   newRating() {
-    this.model = new Ratings(this.rating1, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    this.model = new Ratings(0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0);
   }
 }

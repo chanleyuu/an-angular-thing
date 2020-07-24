@@ -10,6 +10,7 @@ export class Ratings {
     public rating7:number,
     public rating8:number,
     public rating9:number,
-    public rating10:number
+    public rating10:number,
+    public total: number
   ) { }
 }

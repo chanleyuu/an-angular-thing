@@ -1,8 +1,18 @@
 *{font-family: 'Roboto', sans-serif;}
 
+.selected {
+  border: 3px solid #2573ba;
+}
+
+.notselected {
+  border: 1px solid #ddd;
+}
+
 .btn-success {
+  background-color: #2573ba;
   transition-duration: 0.4s;
 }
+
 
 .btn-success:hover {
   background-color: #4CAF50; /* Green */
@@ -146,17 +156,14 @@ body label {
 #rating-table {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
+
   width: 100%;
 }
 
 #rating-table td, #rating-table th {
-  border: 1px solid #ddd;
   padding: 12px;
 }
 
-#rating-table td {
-  padding: 12px;
-}
 
 #rating-table tr:nth-child(even){background-color: #f2f2f2;}
 
@@ -164,6 +171,7 @@ body label {
 
 #rating-table td: {
   border-collapse: separate;
+
   border-color: blue;
 }
 
@@ -173,13 +181,4 @@ body label {
   text-align: left;
   background-color: #2573ba;
   color: white;
-}
-
-
-.selected {
-  border: 5px solid #2573ba;
-}
-
-.notselected {
-
 }
