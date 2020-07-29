@@ -1,13 +1,5 @@
 *{font-family: 'Roboto', sans-serif;}
 
-.selected {
-  border: 3px solid #2573ba;
-}
-
-.notselected {
-  border: 1px solid #ddd;
-}
-
 .btn-success {
   background-color: #2573ba;
   transition-duration: 0.4s;
@@ -155,7 +147,7 @@ body label {
 
 #rating-table {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
+  border-collapse: separate;
 
   width: 100%;
 }
@@ -170,9 +162,7 @@ body label {
 #rating-table tr:hover {background-color: #ddd;}
 
 #rating-table td: {
-  border-collapse: separate;
 
-  border-color: blue;
 }
 
 #rating-table th {
@@ -181,4 +171,12 @@ body label {
   text-align: left;
   background-color: #2573ba;
   color: white;
+}
+
+.selected {
+  border: 3px solid #2573ba;
+}
+
+.notselected {
+  border: 1px solid #ddd;
 }
