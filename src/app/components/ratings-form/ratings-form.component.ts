@@ -17,7 +17,7 @@ export class RatingsFormComponent implements OnInit {
 
   submitted = false;
 
-  model = new Ratings(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+  model = new Ratings(-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1);
 
   constructor() {
     this.model.rating1 = 1;

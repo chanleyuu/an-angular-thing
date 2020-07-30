@@ -11,42 +11,42 @@
           <tr>
           <th> <h2>1. Eating</h2> </th>
           </tr>
-          <tr [ngClass]="{ 'selected' : model.rating1 == 0, 'notselected' : model.rating1 != 0}" (click)="radiotoggle('0', '1')" >
-          <td for="rating1">0: Fully dependent.</td>
+          <tr   >
+          <td [ngClass]="{ 'selected' : model.rating1 == 0, 'notselected' : model.rating1 != 0}" (click)="radiotoggle('0', '1')" for="rating1">0: Fully dependent.</td>
           <td>  <input type="radio" class="option-input radio" ng-value="true" ng-model="model.rating1" id="rating1-1"
                 [(ngModel)]="model.rating1" name="rating1" value="0" type="number"
                  #rating1="ngModel"> </td>
           </tr>
-          <tr [ngClass]="{ 'selected' : model.rating1 == 1, 'notselected' : model.rating1 != 1}" (click)="radiotoggle('1', '1'); ">
-          <td for="rating1">1: Needs help for feeding for greater than 50% of the total amout.</td>
+          <tr >
+          <td [ngClass]="{ 'selected' : model.rating1 == 1, 'notselected' : model.rating1 != 1}" (click)="radiotoggle('1', '1'); " for="rating1">1: Needs help for feeding for greater than 50% of the total amout.</td>
           <td> <input type="radio" class="option-input radio" id="rating1-2"
                 required
                 [(ngModel)]="model.rating1" name="rating1" value="1" type="number"
                 #rating1="ngModel"> </td>
           </tr>
-          <tr [ngClass]="{ 'selected' : model.rating1 == 2, 'notselected' : model.rating1 != 2}" (click)="radiotoggle('2', '1')">
-          <td for="rating1">2: Needs help for feeding for less than 50% of the total amount.</td>
+          <tr >
+          <td [ngClass]="{ 'selected' : model.rating1 == 2, 'notselected' : model.rating1 != 2}" (click)="radiotoggle('2', '1')" for="rating1">2: Needs help for feeding for less than 50% of the total amount.</td>
           <td> <input type="radio" class="option-input radio" id="rating1-3"
                 required
                 [(ngModel)]="model.rating1" name="rating1" value="2" type="number"
                 #rating1="ngModel"> </td>
           </tr>
-          <tr [ngClass]="{ 'selected' : model.rating1 == 3, 'notselected' : model.rating1 != 3}" (click)="radiotoggle('3', '1')">
-          <td for="rating1">3: Independent but needs assisting device or modified food consistency or safety consideration.</td>
+          <tr >
+          <td [ngClass]="{ 'selected' : model.rating1 == 3, 'notselected' : model.rating1 != 3}" (click)="radiotoggle('3', '1')" for="rating1">3: Independent but needs assisting device or modified food consistency or safety consideration.</td>
           <td> <input type="radio" class="option-input radio" id="rating1-4"
                 required
                 [(ngModel)]="model.rating1" name="rating1" value="3" type="number"
                 #rating1="ngModel"> </td>
           </tr>
-          <tr [ngClass]="{ 'selected' : model.rating1 == 4, 'notselected' : model.rating1 != 4}" (click)="radiotoggle('4', '1')">
-          <td for="rating1">4: Independent but requires longer time on a regular basis (regular food, regular utensils).</td>
+          <tr >
+          <td [ngClass]="{ 'selected' : model.rating1 == 4, 'notselected' : model.rating1 != 4}" (click)="radiotoggle('4', '1')" for="rating1">4: Independent but requires longer time on a regular basis (regular food, regular utensils).</td>
           <td> <input type="radio" class="option-input radio" id="rating1-5"
                 required
                 [(ngModel)]="model.rating1" name="rating1" value="4" type="number"
                 #rating1="ngModel"> </td>
           </tr>
-          <tr [ngClass]="{ 'selected' : model.rating1 == 5, 'notselected' : model.rating1 != 5}" (click)="radiotoggle('5', '1')">
-          <td for="rating1">5: Complete independence (regular utensils,regular food and texture).</td>
+          <tr >
+          <td [ngClass]="{ 'selected' : model.rating1 == 5, 'notselected' : model.rating1 != 5}" (click)="radiotoggle('5', '1')" for="rating1">5: Complete independence (regular utensils,regular food and texture).</td>
           <td> <input type="radio" class="option-input radio" id="rating1-6"
                 required
                 [(ngModel)]="model.rating1" name="rating1" value="5" type="number"
@@ -62,43 +62,43 @@
         <tr>
         <th> <h2>2. Dressing Upper Body.</h2> </th>
         </tr>
-        <tr [ngClass]="{ 'selected' : model.rating2 == 0, 'notselected' : model.rating2 != 0}" (click)="radiotoggle('0', '2')">
-        <td for="rating2">0: Fully dependent.</td>
+        <tr >
+        <td [ngClass]="{ 'selected' : model.rating2 == 0, 'notselected' : model.rating2 != 0}" (click)="radiotoggle('0', '2')" for="rating2">0: Fully dependent.</td>
         <td>  <input type="radio" class="option-input radio" id="rating2-1"
               required
               [(ngModel)]="model.rating2" name="rating2" value="0" type="number"
                #rating2="ngModel"> </td>
         </tr>
-        <tr [ngClass]="{ 'selected' : model.rating2 == 1, 'notselected' : model.rating2 != 1}" (click)="radiotoggle('1', '2')">
-        <td for="rating2">1: Needs help but able to perform less than 50% of the task alone.</td>
+        <tr >
+        <td [ngClass]="{ 'selected' : model.rating2 == 1, 'notselected' : model.rating2 != 1}" (click)="radiotoggle('1', '2')" for="rating2">1: Needs help but able to perform less than 50% of the task alone.</td>
         <td> <input type="radio" class="option-input radio" id="rating2-2"
               required
               [(ngModel)]="model.rating2" name="rating2" value="1" type="number"
               #rating2="ngModel"> </td>
         </tr>
-        <tr [ngClass]="{ 'selected' : model.rating2 == 2, 'notselected' : model.rating2 != 2}" (click)="radiotoggle('2', '2')">
-        <td for="rating2">2: Needs help but able to perform greater than or equal to 50% of the task alone.</td>
+        <tr >
+        <td [ngClass]="{ 'selected' : model.rating2 == 2, 'notselected' : model.rating2 != 2}" (click)="radiotoggle('2', '2')" for="rating2">2: Needs help but able to perform greater than or equal to 50% of the task alone.</td>
         <td> <input type="radio" class="option-input radio" id="rating2-3"
               required
               [(ngModel)]="model.rating2" name="rating2" value="2" type="number"
               #rating2="ngModel"> </td>
         </tr>
-        <tr [ngClass]="{ 'selected' : model.rating2 == 3, 'notselected' : model.rating2 != 3}" (click)="radiotoggle('3', '2')">
-        <td for="rating2">3: Modified independence (independent with regard to modification of clothes).</td>
+        <tr >
+        <td [ngClass]="{ 'selected' : model.rating2 == 3, 'notselected' : model.rating2 != 3}" (click)="radiotoggle('3', '2')" for="rating2">3: Modified independence (independent with regard to modification of clothes).</td>
         <td> <input type="radio" class="option-input radio" id="rating2-4"
               required
               [(ngModel)]="model.rating2" name="rating2" value="3" type="number"
               #rating2="ngModel"> </td>
         </tr>
-        <tr [ngClass]="{ 'selected' : model.rating2 == 4, 'notselected' : model.rating2 != 4}" (click)="radiotoggle('4', '2')">
-        <td for="rating2">4: Partial independence (may need longer than reasonable time or help to get clothes from drawer or with buttons).</td>
+        <tr >
+        <td [ngClass]="{ 'selected' : model.rating2 == 4, 'notselected' : model.rating2 != 4}" (click)="radiotoggle('4', '2')" for="rating2">4: Partial independence (may need longer than reasonable time or help to get clothes from drawer or with buttons).</td>
         <td> <input type="radio" class="option-input radio" id="rating2-5"
               required
               [(ngModel)]="model.rating2" name="rating2" value="4" type="number"
               #rating2="ngModel"> </td>
         </tr>
-        <tr [ngClass]="{ 'selected' : model.rating2 == 5, 'notselected' : model.rating2 != 5}" (click)="radiotoggle('5', '2')">
-        <td for="rating2">5: Complete independence.</td>
+        <tr>
+        <td  [ngClass]="{ 'selected' : model.rating2 == 5, 'notselected' : model.rating2 != 5}" (click)="radiotoggle('5', '2')" for="rating2">5: Complete independence.</td>
         <td> <input type="radio" class="option-input radio" id="rating2-6"
               required
               [(ngModel)]="model.rating2" name="rating2" value="5" type="number"
@@ -114,15 +114,15 @@
         <tr>
         <th> <h2>3. Dressing lower body.</h2> </th>
         </tr>
-        <tr [ngClass]="{ 'selected' : model.rating3 == 0, 'notselected' : model.rating3 != 0}" (click)="radiotoggle('0', '3')">
-        <td for="rating3">0: Fully dependent.</td>
+        <tr >
+        <td [ngClass]="{ 'selected' : model.rating3 == 0, 'notselected' : model.rating3 != 0}" (click)="radiotoggle('0', '3')" for="rating3">0: Fully dependent.</td>
         <td>  <input type="radio" class="option-input radio" id="rating3-1"
               required
               [(ngModel)]="model.rating3" name="rating3" value="0"
                #rating3="ngModel"> </td>
         </tr>
-        <tr [ngClass]="{ 'selected' : model.rating3 == 1, 'notselected' : model.rating3 != 1}" (click)="radiotoggle('1', '3')">
-        <td for="rating3">1: Needs help but able to perform less than 50% of the task alone.</td>
+        <tr >
+        <td [ngClass]="{ 'selected' : model.rating3 == 1, 'notselected' : model.rating3 != 1}" (click)="radiotoggle('1', '3')" for="rating3">1: Needs help but able to perform less than 50% of the task alone.</td>
         <td> <input type="radio" class="option-input radio" id="rating3-2"
               required
               [(ngModel)]="model.rating3" name="rating3" value="1"
