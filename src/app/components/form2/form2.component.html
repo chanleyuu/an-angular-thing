@@ -4,9 +4,19 @@
     <form (ngSubmit)="onSubmit()" #ratingsForm="ngForm">
       <div class="form-group">
         <div class="Labels">
+          <label for="nameinput">Name:</label>
             <input type="text" class="form-control" ng-value="Name" ng-model="model.name" id="control1"
             required
-            [(ngModel)]="model.name" name="rating1"
+            [(ngModel)]="model.name" name="nameinput"
+            #rating1="ngModel">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="Labels">
+          <label for="nameinput">Date:</label>
+            <input type="text" class="form-control" ng-value="Date" ng-model="model.date" id="control2"
+            required
+            [(ngModel)]="model.date" name="dateinput"
             #rating1="ngModel">
         </div>
       </div>
