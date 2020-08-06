@@ -16,21 +16,21 @@
           <tr   >
           <td [ngClass]="{ 'selected' : model.rating1 == 0, 'notselected' : model.rating1 != 0}" (click)="radiotoggle('0', '1')" for="rating1">0: Fully dependent.</td>
           <td>  <input type="radio" class="option-input radio" ng-value="true" ng-model="model.rating1" id="rating1-1"
-                [(ngModel)]="model.rating1" name="rating1" value="0" type="number"
+                [(ngModel)]="model.rating1" name="rating1" value="0" 
                  #rating1="ngModel"> </td>
           </tr>
           <tr >
           <td [ngClass]="{ 'selected' : model.rating1 == 1, 'notselected' : model.rating1 != 1}" (click)="radiotoggle('1', '1'); " for="rating1">1: Needs help for feeding for greater than 50% of the total amout.</td>
           <td> <input type="radio" class="option-input radio" id="rating1-2"
                 required
-                [(ngModel)]="model.rating1" name="rating1" value="1" type="number"
+                [(ngModel)]="model.rating1" name="rating1" value="1"
                 #rating1="ngModel"> </td>
           </tr>
           <tr >
           <td [ngClass]="{ 'selected' : model.rating1 == 2, 'notselected' : model.rating1 != 2}" (click)="radiotoggle('2', '1')" for="rating1">2: Needs help for feeding for less than 50% of the total amount.</td>
           <td> <input type="radio" class="option-input radio" id="rating1-3"
                 required
-                [(ngModel)]="model.rating1" name="rating1" value="2" type="number"
+                [(ngModel)]="model.rating1" name="rating1" value="2"
                 #rating1="ngModel"> </td>
           </tr>
           <tr >

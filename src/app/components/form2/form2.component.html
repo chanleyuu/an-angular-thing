@@ -4,8 +4,10 @@
     <form (ngSubmit)="onSubmit()" #ratingsForm="ngForm">
       <div class="form-group">
         <div class="Labels">
-
-          
+            <input type="text" class="form-control" ng-value="Name" ng-model="model.name" id="control1"
+            required
+            [(ngModel)]="model.name" name="rating1"
+            #rating1="ngModel">
         </div>
       </div>
     </form>

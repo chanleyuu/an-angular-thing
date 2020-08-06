@@ -3,7 +3,7 @@ export class Form2Results {
   constructor(
     public name: string,
     public date: string,
-    public time: time,
+    public time: string,
     public hip_flexors: boolean,
     public rom1: number,
     public ifyes1: string,
@@ -16,6 +16,6 @@ export class Form2Results {
     public elbow_flexors: boolean,
     public ifyes4: string,
     public forarm: boolean,
-    public ifyes5: string 
+    public ifyes5: string
   ) {}
 }

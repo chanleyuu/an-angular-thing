@@ -4,6 +4,7 @@ import { TosComponent } from './components/tos/tos.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { RatingsPageComponent } from './components/pages/ratings-page/ratings-page.component';
 import { RatingsFormComponent } from './components/ratings-form/ratings-form.component';
+import { Form2Component} from './components/form2/form2.component';
 
 
 const routes: Routes = [
