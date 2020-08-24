@@ -12,7 +12,7 @@ export class Form2Component implements OnInit {
 
   submitted = false;
 
-  model = new Form2Results("Andrew Ryan", "02/03/2004", "10:20", false, 0, null, false, null, 0, false, null, 0, false, null, false, null);
+  model = new Form2Results("Andrew Ryan", "02/03/2004", "10:20", false, 0, null, null, false, null, null, 0, false, null, null, 0, false, null, null, 0, false, 0, null, null);
 
   ngOnInit(): void {
   }
