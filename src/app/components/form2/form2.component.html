@@ -1,6 +1,5 @@
 <div class="container">
   <div [hidden]="submitted">
-    <h1>Are limitations in range of motion present of the:</h1>
 
     <form (ngSubmit)="onSubmit()" #ratingsForm="ngForm">
       <div class="form-group">
@@ -11,41 +10,46 @@
             [(ngModel)]="model.name" name="nameinput"
             #rating1="ngModel">
         </div>
-      </div>
-      <div class="form-group">
         <div class="Labels">
-          <label for="dateinput">Date:</label>
+          <label for="dateinput">Date:  </label>
             <input type="text" class="form-control" value="Date" ng-model="model.date" id="control2"
             required
             [(ngModel)]="model.date" name="dateinput"
             #rating1="ngModel">
         </div>
-      </div>
-      <div class="form-group">
         <div class="Labels">
-          <label for="timeinput">Time:</label>
+          <label for="timeinput">Time: </label>
             <input type="text" class="form-control" value="time" ng-model="model.time" id="control3"
             required
             [(ngModel)]="model.time" name="timeinput"
             #rating1="ngModel">
         </div>
-      </div>
-      <div class="form-group">
+
+        <h1>Are limitations in range of motion present of the:</h1>
+
         <div class="Labels">
           <label for="hipinput">Hip Flexors:</label>
+
+          <table style="width:12%">
+          <tr>
+            <td>
           <label>Yes</label>
             <input type="radio" class="option-input radio" value="true" ng-model="model.hip_flexors" id="control4"
             required
             [(ngModel)]="model.hip_flexors" name="hipinput1"
             #rating1="ngModel">
+            </td>
+            <td>
             <label>No</label>
             <input type="radio" class="option-input radio" value="false" ng-model="model.hip_flexors" id="control5"
             required
             [(ngModel)]="model.hip_flexors" name="hipinput2"
             #rating1="ngModel">
-        </div>
-      </div>
-      <div class="form-group">
+            </td>
+          </tr>
+          </table>
+          </div>
+          <br>
         <div class="Labels">
           <label for="rom1input">ROM:</label>
             <input type="number" class="form-control" value="0" ng-model="model.rom1" id="control6"
@@ -56,24 +60,41 @@
       </div>
       <div class="form-group">
         <div class="Labels">
+          <label for="hipinput">Hip Flexors:</label>
+
+          <table style="width:24%">
+          <tr>
+            <td>
           <label for="nameinput">If Yes they are:</label>
+          <br>
             <div>Minimal(No limitations to function)</div>
             <input type="radio" class="option-input radio" value="Minimal(No limitations to function)" ng-model="model.ifyes1" id="control7"
             required
             [(ngModel)]="model.ifyes1" name="yesinput1-1"
             #rating1="ngModel">
+            </td>
+            <td>
             <div>Moderate(Some limitations adacptions necessary)</div>
+            <br>
             <input type="radio" class="option-input radio" value="Moderate(Some limitations adacptions necessary)" ng-model="model.ifyes1" id="control8"
             required
             [(ngModel)]="model.ifyes1" name="yesinput1-2"
             #rating1="ngModel">
+            </td>
+            <td>
             <div>Severe(Imposing limits to functions)</div>
+            <br>
+            <br>
             <input type="radio" class="option-input radio" value="Severe(Imposing limits to functions)" ng-model="model.ifyes1" id="control9"
             required
             [(ngModel)]="model.ifyes1" name="yesinput1-3"
             #rating1="ngModel">
+            </td>
+            </tr>
+            </table>
         </div>
       </div>
+      <br>
       <div class="form-group">
         <div class="Labels">
           <label for="commentbox1">Comments:</label>
@@ -87,17 +108,25 @@
 
       <div class="form-group">
         <div class="Labels">
+          <table style="width:12%">
+          <tr>
+            <td>
           <label for="hipinput">Knee Flexors:</label>
           <div>Yes</div>
             <input type="radio" class="option-input radio" value="true" ng-model="model.knee_flexors" id="control10"
             required
             [(ngModel)]="model.knee_flexors" name="kneeinput1"
             #rating1="ngModel">
+            </td>
+            <td>
             <div>No</div>
             <input type="radio" class="option-input radio" value="false" ng-model="model.knee_flexors" id="control11"
             required
             [(ngModel)]="model.knee_flexors" name="kneeinput2"
             #rating1="ngModel">
+            </td>
+            </tr>
+            </table>
         </div>
       </div>
       <div class="form-group">
@@ -111,23 +140,32 @@
       </div>
       <div class="form-group">
         <div class="Labels">
+          <table style="width:12%">
+          <tr>
+            <td>
           <label for="nameinput">If Yes they are:</label>
           <div>Minimal(No limitations to function)" ng-model="model.ifyes2</div>
             <input type="radio" class="option-input radio" value="Minimal(No limitations to function)" ng-model="model.ifyes2" id="control13"
             required
             [(ngModel)]="model.ifyes2" name="yesinput2-1"
             #rating1="ngModel">
+            </td>
+            <td>
             <div>Moderate(Some limitations adacptions necessary)</div>
             <input type="radio" class="option-input radio" value="Moderate(Some limitations adacptions necessary)" ng-model="model.ifyes2" id="control14"
             required
             [(ngModel)]="model.ifyes2" name="yesinput2-2"
             #rating1="ngModel">
+            </td>
+            <td>
             <div>Severe(Imposing limits to functions)</div>
             <input type="radio" class="option-input radio" value="Severe(Imposing limits to functions)" ng-model="model.ifyes2" id="control15"
             required
             [(ngModel)]="model.ifyes2" name="yesinput2-3"
             #rating1="ngModel">
-
+            </td>
+            </tr>
+            </table>
         </div>
       </div>
 
@@ -146,16 +184,24 @@
       <div class="form-group">
         <div class="Labels">
           <label for="ankleinput">Ankle plantar Flexors:</label>
+          <table style="width:12%">
+          <tr>
+            <td>
           <div>Yes</div>
             <input type="radio" class="option-input radio" value="true" ng-model="model.ankle_flexors" id="control16"
             required
             [(ngModel)]="model.ankle_flexors" name="ankleinput1"
             #rating1="ngModel">
+            </td>
+            <td>
             <div>No</div>
             <input type="radio" class="option-input radio" value="false" ng-model="model.ankle_flexors" id="control17"
             required
             [(ngModel)]="model.ankle_flexors" name="ankleinput2"
             #rating1="ngModel">
+            </td>
+            </tr>
+            </table>
         </div>
       </div>
       <div class="form-group">
@@ -169,22 +215,32 @@
       </div>
       <div class="form-group">
         <div class="Labels">
+          <table style="width:12%">
+          <tr>
+            <td>
           <label for="nameinput">If Yes they are:</label>
           <div>Minimal(No limitations to function)</div>
             <input type="radio" class="option-input radio" value="Minimal(No limitations to function)" ng-model="model.ifyes3" id="control19"
             required
             [(ngModel)]="model.ifyes3" name="yesinput3-1"
             #rating1="ngModel">
+            </td>
+            <td>
             <div>Moderate(Some limitations adacptions necessary)</div>
             <input type="radio" class="option-input radio" value="Moderate(Some limitations adacptions necessary)" ng-model="model.ifyes3" id="control20"
             required
             [(ngModel)]="model.ifyes3" name="yesinput3-2"
             #rating1="ngModel">
+            </td>
+            <td>
             <div>Severe(Imposing limits to functions)</div>
             <input type="radio" class="option-input radio" value="Severe(Imposing limits to functions)" ng-model="model.ifyes3" id="control21"
             required
             [(ngModel)]="model.ifyes3" name="yesinput3-3"
             #rating1="ngModel">
+            </td>
+            </tr>
+            </table>
         </div>
       </div>
 
@@ -203,16 +259,24 @@
       <div class="form-group">
         <div class="Labels">
           <label for="elbowinput">Elbow Flexors:</label>
+          <table style="width:12%">
+          <tr>
+            <td>
           <div>Yes</div>
             <input type="radio" class="option-input radio" value="true" ng-model="model.elbow_flexors" id="control22"
             required
             [(ngModel)]="model.elbow_flexors" name="elbowinput2"
             #rating1="ngModel">
+            </td>
+            <td>
             <div>No</div>
             <input type="radio" class="option-input radio" value="false" ng-model="model.elbow_flexors" id="control23"
             required
             [(ngModel)]="model.elbow_flexors" name="elbowinput1"
             #rating1="ngModel">
+            </td>
+            </tr>
+            </table>
         </div>
       </div>
       <div class="form-group">
@@ -225,22 +289,32 @@
       </div>
       <div class="form-group">
         <div class="Labels">
+          <table style="width:12%">
+          <tr>
+            <td>
           <label for="nameinput">If Yes they are:</label>
           <div>Minimal(No limitations to function)</div>
             <input type="radio" class="option-input radio" value="Minimal(No limitations to function)" ng-model="model.ifyes4" id="control25"
             required
             [(ngModel)]="model.ifyes4" name="yesinput4-1"
             #rating1="ngModel">
+            </td>
+            <td>
             <div>Moderate(Some limitations adacptions necessary)</div>
             <input type="radio" class="option-input radio" value="Moderate(Some limitations adacptions necessary)" ng-model="model.ifyes4" id="control26"
             required
             [(ngModel)]="model.ifyes4" name="yesinput4-2"
             #rating1="ngModel">
+            </td>
+            <td>
             <div>Severe(Imposing limits to functions)</div>
             <input type="radio" class="option-input radio" value="Severe(Imposing limits to functions)" ng-model="model.ifyes4" id="control27"
             required
             [(ngModel)]="model.ifyes4" name="yesinput4-3"
             #rating1="ngModel">
+            </td>
+            </tr>
+            </table>
         </div>
       </div>
 
@@ -259,16 +333,24 @@
       <div class="form-group">
         <div class="Labels">
           <label for="elbowinput">Forarm Supination:</label>
+          <table style="width:12%">
+          <tr>
+            <td>
           <div>Yes</div>
             <input type="radio" class="option-input radio" value="true" ng-model="model.forarm" id="control28"
             required
             [(ngModel)]="model.forarm" name="hipinput"
             #rating1="ngModel">
             <div>No</div>
+            </td>
+            <td>
             <input type="radio" class="option-input radio" value="false" ng-model="model.forarm" id="control29"
             required
             [(ngModel)]="model.forarm" name="forarminput"
             #rating1="ngModel">
+            </td>
+            </tr>
+            </table>
         </div>
       </div>
       <div class="form-group">
@@ -282,22 +364,32 @@
       </div>
       <div class="form-group">
         <div class="Labels">
+          <table style="width:12%">
+          <tr>
+            <td>
           <label for="nameinput">If Yes they are:</label>
           <div>Minimal(No limitations to function)</div>
             <input type="radio" class="option-input radio" value="Minimal(No limitations to function)" ng-model="model.ifyes5" id="control31"
             required
             [(ngModel)]="model.ifyes5" name="yesinput5-1"
             #rating1="ngModel">
+            </td>
+            <td>
             <div>Moderate(Some limitations adacptions necessary)</div>
             <input type="radio" class="option-input radio" value="Moderate(Some limitations adacptions necessary)" ng-model="model.ifyes5" id="control32"
             required
             [(ngModel)]="model.ifyes5" name="yesinput5-2"
             #rating1="ngModel">
+            </td>
+            <td>
             <div>Severe(Imposing limits to functions)</div>
             <input type="radio" class="option-input radio" value="Severe(Imposing limits to functions)" ng-model="model.ifyes5" id="control33"
             required
             [(ngModel)]="model.ifyes5" name="yesinput5-3"
             #rating1="ngModel">
+            </td>
+            </tr>
+            </table>
         </div>
       </div>
 
