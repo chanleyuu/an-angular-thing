@@ -14,8 +14,8 @@ import { RatingsFormComponent } from './components/ratings-form/ratings-form.com
 import { RatingsPageComponent } from './components/pages/ratings-page/ratings-page.component';
 import { TogglebuttonComponent } from './components/togglebutton/togglebutton.component';
 import { RadioselectDirective } from './radioselect.directive';
-import { Form2Component } from './components/form2/form2.component';
-import { Form2pageComponent } from './components/pages/form2page/form2page.component';
+import { ContratureFormComponent } from './components/ContratureForm/ContratureForm.component';
+import { ContratureFormPageComponent } from './components/pages/ContratureForm-page/ContratureForm-page.component';
 
 @NgModule({
   declarations: [
@@ -29,8 +29,8 @@ import { Form2pageComponent } from './components/pages/form2page/form2page.compo
     RatingsPageComponent,
     TogglebuttonComponent,
     RadioselectDirective,
-    Form2Component,
-    Form2pageComponent
+    ContratureFormComponent,
+    ContratureFormPageComponent
   ],
   imports: [
     BrowserModule,
